@@ -52,7 +52,7 @@ export default function HeroSection() {
             inactiveTransition="transform 0.6s ease-in-out"
             className="block"
           >
-            <img src={HERO_PORTRAIT} alt="Portrait of Muhammad Aqib" className="h-[52vh] w-auto max-w-none select-none sm:h-[60vh] lg:h-[64vh]" draggable={false} />
+            <img src={HERO_PORTRAIT} alt="Portrait of Muhammad Aqib" className="h-[42vh] w-auto max-w-none select-none sm:h-[60vh] lg:h-[64vh]" draggable={false} />
           </Magnet>
         </FadeIn>
       </div>
