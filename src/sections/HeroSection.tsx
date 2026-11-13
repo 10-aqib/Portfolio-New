@@ -21,7 +21,7 @@ export default function HeroSection() {
       <div className="overflow-hidden">
         <FadeIn delay={0.15} y={40}>
           <h1 className="hero-heading mt-6 w-full whitespace-nowrap text-center text-[14vw] font-black uppercase leading-none tracking-tight sm:mt-4 sm:text-[15vw] md:-mt-5 md:text-[16vw] lg:text-[17.5vw]">
-            Hi, i&rsquo;m jack
+            Hi, i&rsquo;m aqib
           </h1>
         </FadeIn>
       </div>
@@ -34,7 +34,7 @@ export default function HeroSection() {
             className="max-w-[160px] font-light uppercase leading-snug tracking-wide text-[#D7E2EA] sm:max-w-[220px] md:max-w-[260px]"
             style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
           >
-            a 3d creator driven by crafting striking and unforgettable projects
+            my name is muhammad aqib, a web &amp; mobile developer building apps people love
           </p>
         </FadeIn>
         <FadeIn delay={0.5} y={20}>
@@ -43,7 +43,7 @@ export default function HeroSection() {
       </div>
 
       {/* Positioning lives on this wrapper so FadeIn's transform doesn't clobber the Tailwind translate. */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 w-[280px] -translate-x-1/2 -translate-y-1/2 sm:top-auto sm:bottom-0 sm:w-[360px] sm:translate-y-0 md:w-[440px] lg:w-[520px]">
+      <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 sm:top-auto sm:bottom-0 sm:translate-y-0">
         <FadeIn delay={0.6} y={30}>
           <Magnet
             padding={150}
@@ -52,7 +52,7 @@ export default function HeroSection() {
             inactiveTransition="transform 0.6s ease-in-out"
             className="block"
           >
-            <img src={HERO_PORTRAIT} alt="Portrait of Jack, 3D creator" className="h-auto w-full select-none" draggable={false} />
+            <img src={HERO_PORTRAIT} alt="Portrait of Muhammad Aqib" className="h-[52vh] w-auto max-w-none select-none sm:h-[60vh] lg:h-[64vh]" draggable={false} />
           </Magnet>
         </FadeIn>
       </div>

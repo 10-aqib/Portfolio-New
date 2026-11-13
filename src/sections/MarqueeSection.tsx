@@ -1,12 +1,10 @@
 import { useEffect, useRef } from 'react';
-import { MARQUEE_IMAGES } from '../data/content';
+import { MARQUEE_ROW_1, MARQUEE_ROW_2 } from '../data/content';
 
 const TILE_W = 420;
 const TILE_H = 270;
 const GAP = 12; // gap-3
 
-const row1 = MARQUEE_IMAGES.slice(0, 11);
-const row2 = MARQUEE_IMAGES.slice(11);
 const triple = (items: string[]) => [...items, ...items, ...items];
 
 // One full set of tiles. Rows are pre-shifted left by this much so the middle
@@ -27,7 +25,7 @@ function Row({ images, rowRef }: { images: string[]; rowRef: React.RefObject<HTM
           alt=""
           loading="lazy"
           draggable={false}
-          className="shrink-0 rounded-2xl object-cover"
+          className="shrink-0 rounded-2xl object-cover object-top"
           style={{ width: TILE_W, height: TILE_H }}
         />
       ))}
@@ -66,8 +64,8 @@ export default function MarqueeSection() {
       style={{ overflowX: 'clip' }}
       aria-label="Selected work previews"
     >
-      <Row images={row1} rowRef={row1Ref} />
-      <Row images={row2} rowRef={row2Ref} />
+      <Row images={MARQUEE_ROW_1} rowRef={row1Ref} />
+      <Row images={MARQUEE_ROW_2} rowRef={row2Ref} />
     </section>
   );
 }

@@ -1,40 +1,32 @@
-import { CONTACT_HREF } from '../config';
-
-const IMG = (file: string) =>
-  `https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2F${file}&w=1280&q=85`;
+import { CONTACT_HREF, PROFILE } from '../config';
 
 export const NAV_LINKS = [
   { label: 'About', href: '#about' },
-  { label: 'Price', href: '#services' },
+  { label: 'Services', href: '#services' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: CONTACT_HREF },
+  { label: 'Contact', href: '#contact' },
 ];
 
-export const HERO_PORTRAIT =
-  'https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png';
+export const HERO_PORTRAIT = '/images/aqib.webp';
 
-export const MARQUEE_IMAGES = [
-  'https://motionsites.ai/assets/hero-space-voyage-preview-eECLH3Yc.gif',
-  'https://motionsites.ai/assets/hero-codenest-preview-Cgppc2qV.gif',
-  'https://motionsites.ai/assets/hero-vex-ventures-preview-BczMFIiw.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-v2-preview-DjvxjG3C.gif',
-  'https://motionsites.ai/assets/hero-asme-preview-B_nGDnTP.gif',
-  'https://motionsites.ai/assets/hero-transform-data-preview-Cx5OU29N.gif',
-  'https://motionsites.ai/assets/hero-vitara-preview-Cjz2QYyU.gif',
-  'https://motionsites.ai/assets/hero-terra-preview-BFjrCr7T.gif',
-  'https://motionsites.ai/assets/hero-skyelite-preview-DHaZIgUv.gif',
-  'https://motionsites.ai/assets/hero-aethera-preview-DknSlcTa.gif',
-  'https://motionsites.ai/assets/hero-designpro-preview-D8c5_een.gif',
-  'https://motionsites.ai/assets/hero-stellar-ai-preview-D3HL6bw1.gif',
-  'https://motionsites.ai/assets/hero-xportfolio-preview-D4A8maiC.gif',
-  'https://motionsites.ai/assets/hero-orbit-web3-preview-BXt4OttD.gif',
-  'https://motionsites.ai/assets/hero-nexora-preview-cx5HmUgo.gif',
-  'https://motionsites.ai/assets/hero-evr-ventures-preview-DZxeVFEX.gif',
-  'https://motionsites.ai/assets/hero-planet-orbit-preview-DWAP8Z1P.gif',
-  'https://motionsites.ai/assets/hero-new-era-preview-CocuDUm9.gif',
-  'https://motionsites.ai/assets/hero-wealth-preview-B70idl_u.gif',
-  'https://motionsites.ai/assets/hero-luminex-preview-CxOP7ce6.gif',
-  'https://motionsites.ai/assets/hero-celestia-preview-0yO3jXO8.gif',
+const P = '/images/projects';
+
+// Two rows of project previews for the scroll marquee.
+export const MARQUEE_ROW_1 = [
+  `${P}/1tap.jpg`,
+  `${P}/beef-burger.jpg`,
+  `${P}/space-cleaner.jpg`,
+  `${P}/mobile-1tap.webp`,
+  `${P}/mobile-beef-burger.webp`,
+  `${P}/mobile-space-cleaner.webp`,
+];
+export const MARQUEE_ROW_2 = [
+  `${P}/mobile-space-cleaner.webp`,
+  `${P}/space-cleaner.jpg`,
+  `${P}/mobile-beef-burger.webp`,
+  `${P}/beef-burger.jpg`,
+  `${P}/mobile-1tap.webp`,
+  `${P}/1tap.jpg`,
 ];
 
 const ICONS = 'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7';
@@ -67,33 +59,48 @@ export const ABOUT_IMAGES = [
 ];
 
 export const ABOUT_TEXT =
-  "With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!";
+  "My name is Muhammad Aqib, a web and mobile application developer and BS Information Technology student in Islamabad. I build Flutter apps on Firebase, React and Next.js sites with real-time sync, and websites for local businesses. Let's build something useful together!";
+
+export const ABOUT_FACTS = [
+  { label: 'Based in', value: PROFILE.location },
+  { label: 'Languages', value: 'Urdu, English' },
+  { label: 'Open to', value: 'Freelance · Remote · Hybrid · On-site' },
+];
+
+export const STATS = [
+  { value: '5+', label: 'Projects delivered for local businesses' },
+  { value: '2nd', label: 'Place · Project Gala, Bahria University' },
+];
 
 export const SERVICES = [
   {
-    name: '3D Modeling',
+    name: 'Web Development',
     description:
-      'Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.',
+      'Responsive websites and modern web apps built with React and Next.js — fast, clean and made for real users.',
   },
   {
-    name: 'Rendering',
+    name: 'Mobile Apps',
     description:
-      'High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.',
+      'Cross-platform apps with Flutter and Dart, backed by Firebase, from the first screen to a finished product.',
   },
   {
-    name: 'Motion Design',
+    name: 'Full-Stack Solutions',
     description:
-      'Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.',
+      'End-to-end products with Node.js and Supabase: databases, authentication and REST APIs that just work.',
   },
   {
-    name: 'Branding',
+    name: 'UI / UX',
     description:
-      'Crafting cohesive visual identities — from logos to full brand systems — that communicate a clear and memorable presence.',
+      'Mobile-first, responsive interfaces with motion and attention to detail that make an app feel effortless.',
   },
   {
-    name: 'Web Design',
+    name: 'Backend & Cloud',
+    description: 'Firebase and Firestore, APIs and webhooks, and smooth deployments on Vercel.',
+  },
+  {
+    name: 'AI & Automation',
     description:
-      'Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.',
+      'AI chat and API integrations plus business automation, from e-commerce stores to appointment systems.',
   },
 ];
 
@@ -101,38 +108,110 @@ export interface Project {
   number: string;
   category: string;
   name: string;
-  images: { topLeft: string; bottomLeft: string; right: string };
+  description: string;
+  stack: string[];
+  live: string;
+  repo: string;
+  images: { landscape: string; tall: string };
 }
 
 export const PROJECTS: Project[] = [
   {
     number: '01',
-    category: 'Client',
-    name: 'Nextlevel Studio',
-    images: {
-      topLeft: IMG('hf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png'),
-      bottomLeft: IMG('hf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png'),
-      right: IMG('hf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png'),
-    },
+    category: 'Real-time web app',
+    name: '1Tap',
+    description:
+      'Move text, links and files between devices with no account or signup. Join a shared room on the same Wi-Fi, or pair privately with a room code or QR code.',
+    stack: ['React', 'TypeScript', 'Supabase Realtime', 'TanStack Router', 'Tailwind CSS'],
+    live: 'https://1tap-theta.vercel.app',
+    repo: 'https://github.com/10-aqib/1Tap',
+    images: { landscape: `${P}/1tap.jpg`, tall: `${P}/mobile-1tap.webp` },
   },
   {
     number: '02',
-    category: 'Personal',
-    name: 'Aura Brand Identity',
-    images: {
-      topLeft: IMG('hf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png'),
-      bottomLeft: IMG('hf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png'),
-      right: IMG('hf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png'),
-    },
+    category: 'Restaurant ordering',
+    name: 'Beef Burger Patties',
+    description:
+      'A cinematic burger-restaurant website with online ordering: a topping-by-topping burger builder, kitchen notes, a cart, deals and branch discovery.',
+    stack: ['React', 'TypeScript', 'GSAP', 'Framer Motion', 'Zustand', 'Supabase'],
+    live: 'https://beef-burger-patties.vercel.app',
+    repo: 'https://github.com/10-aqib/Beef-Burger-Patties',
+    images: { landscape: `${P}/beef-burger.jpg`, tall: `${P}/mobile-beef-burger.webp` },
   },
   {
     number: '03',
-    category: 'Client',
-    name: 'Solaris Digital',
-    images: {
-      topLeft: IMG('hf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png'),
-      bottomLeft: IMG('hf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png'),
-      right: IMG('hf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png'),
-    },
+    category: 'Storage tool',
+    name: 'Space Cleaner',
+    description:
+      'Finds duplicate, unused and heavy files and shows where your disk space went, using interactive D3 maps, a virtualized file list and a keyboard command palette.',
+    stack: ['React', 'TypeScript', 'Vite', 'D3.js', 'TanStack Virtual', 'Zustand', 'Tauri'],
+    live: 'https://space-cleaner.vercel.app',
+    repo: 'https://github.com/10-aqib/Cleaner',
+    images: { landscape: `${P}/space-cleaner.jpg`, tall: `${P}/mobile-space-cleaner.webp` },
   },
 ];
+
+export const MORE_PROJECTS = [
+  {
+    name: 'SkillBridge',
+    tag: 'Final Year Project',
+    text: 'Connects customers with reliable local skilled workers — a Flutter + Firebase mobile app with a Next.js + Supabase website.',
+    repo: 'https://github.com/10-aqib/SkillBridge-',
+  },
+  {
+    name: 'PixelMint',
+    tag: 'Web tool',
+    text: 'Compress, resize and convert images entirely in the browser. Nothing is ever uploaded to a server.',
+    repo: 'https://github.com/10-aqib/PixelMint',
+  },
+  {
+    name: 'Speech ⇄ Text',
+    tag: 'Flutter app',
+    text: 'Converts speech to text in real time and reads typed text aloud.',
+    repo: 'https://github.com/10-aqib/TEXT-TO-SPEECH-',
+  },
+  {
+    name: 'Infinity Basket Mart',
+    tag: 'Client project',
+    text: 'An e-commerce website for a local mart in F-8, Islamabad.',
+    repo: 'https://github.com/10-aqib/Infinity-Basket-Mart',
+  },
+];
+
+export const EXPERIENCE = [
+  {
+    period: 'May 2026 — Present',
+    role: 'Software & Digital Solutions Intern',
+    org: 'Altaf Developers',
+    text: 'Website maintenance and optimisation, digital solutions for clients, a client appointment management system, and Meta Ads campaigns.',
+  },
+  {
+    period: 'June 2024 — Present',
+    role: 'Digital Solutions Developer',
+    org: 'Freelance · Local businesses, Islamabad',
+    text: '5+ projects delivered — websites and e-commerce, including Infinity Basket Mart for a mart in F-8.',
+  },
+  {
+    period: 'Jan 2023 — Present',
+    role: 'Web & Mobile Developer',
+    org: 'Independent & project work',
+    text: 'Built and deployed 1Tap, Beef Burger Patties and Space Cleaner; built PixelMint and SkillBridge.',
+  },
+];
+
+export const EDUCATION = {
+  period: 'Jan 2023 — Jan 2027',
+  degree: 'BS Information Technology',
+  school: 'Bahria University, Main Campus E-8, Islamabad',
+  badge: '2nd Place · Project Gala (university level)',
+};
+
+export const SKILLS = [
+  { group: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'GSAP'] },
+  { group: 'Mobile', items: ['Flutter', 'Dart', 'Riverpod'] },
+  { group: 'Backend & Data', items: ['Node.js', 'Firebase', 'Firestore', 'Supabase', 'REST APIs'] },
+  { group: 'Tools', items: ['Vercel', 'Git & GitHub', 'D3.js', 'Zustand', 'Tauri'] },
+  { group: 'Also', items: ['AI integration', 'Business automation', 'Meta Ads'] },
+];
+
+export { CONTACT_HREF };
